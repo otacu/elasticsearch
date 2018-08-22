@@ -17,10 +17,6 @@
 	</parent>
 	
 	<modules>
-        <module>elasticsearch-common</module>
-        <module>elasticsearch-dao</module>
-        <module>elasticsearch-pojo</module>
         <module>elasticsearch-service</module>
-        <module>elasticsearch-web</module>
 	</modules>
 </project>
