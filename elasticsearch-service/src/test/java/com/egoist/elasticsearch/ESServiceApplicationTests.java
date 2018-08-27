@@ -1,9 +1,7 @@
 package com.egoist.elasticsearch;
 
 import com.alibaba.fastjson.JSONObject;
-import com.egoist.elasticsearch.dao.CartMapper;
 import com.egoist.elasticsearch.document.GoodsInfo;
-import com.egoist.elasticsearch.pojo.Cart;
 import com.egoist.elasticsearch.repository.GoodsRepository;
 import com.egoist.parent.common.utils.http.EgoistOkHttp3Util;
 import org.junit.Test;
@@ -14,14 +12,10 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Optional;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class ESServiceApplicationTests {
-
-    @Autowired
-    private CartMapper cartMapper;
 
     @Autowired
     private GoodsRepository goodsRepository;
@@ -41,12 +35,6 @@ public class ESServiceApplicationTests {
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }
-
-    @Test
-    public void testMybatis() {
-        Cart cart = cartMapper.selectByPrimaryKey(25L);
-        System.out.println("##########" + JSONObject.toJSONString(cart));
     }
 
     @Test
