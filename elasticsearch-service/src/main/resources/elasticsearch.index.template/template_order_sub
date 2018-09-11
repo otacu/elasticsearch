@@ -1,0 +1,12 @@
+{
+  "type_order_sub": {
+    "properties": {
+      "join_field": {
+        "type": "join",
+        "relations": {
+          "order_sub": "order_item"
+        }
+      }
+    }
+  }
+}
